@@ -15,7 +15,7 @@ namespace WSDL.operaciones
 
         public string Mostrar(int id)
         {
-            return saludos[id+1];
+            return saludos[id-1];
         }
     }
 }
