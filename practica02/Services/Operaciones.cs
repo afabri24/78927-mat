@@ -9,12 +9,15 @@ namespace WSDL.operaciones
         public string Saludar(string nombre)
         {
             string msj= "Hola " + nombre;
-            saludos.Add(msj);
+            saludos.Add(nombre);
             return msj;
         }
 
         public string Mostrar(int id)
         {
+            if (id > saludos.Count)
+                return "No existe el saludo";
+            else
             return saludos[id-1];
         }
     }
